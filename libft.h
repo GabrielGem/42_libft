@@ -6,7 +6,7 @@
 /*   By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 21:06:07 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/08/06 17:33:04 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/08/22 19:44:57 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_itoa_base(long int n, char *symbols);
+char	*ft_uitoa_base(unsigned long int n, char *symbols);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	*ft_memset(void *s, int c, size_t n);

@@ -6,7 +6,7 @@
 #    By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 18:07:32 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/08/06 17:27:12 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/08/22 19:50:35 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,9 @@ SRCS = \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+	ft_itoa_base.c \
+	ft_uitoa_base.c
 
 SRCS_BONUS = \
 	ft_lstnew_bonus.c \
@@ -73,13 +75,13 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 $(OBJSDIR)/%.o: %.c | $(OBJSDIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJSDIR):
 	mkdir -p $(OBJSDIR)
 
 bonus:
-	$(MAKE) OBJS='$(OBJS) $(OBJS_BONUS)'
+	@$(MAKE) OBJS='$(OBJS) $(OBJS_BONUS)'
 
 clean:
 	rm -rf $(OBJSDIR)
