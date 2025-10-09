@@ -6,7 +6,7 @@
 #    By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 18:07:32 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/08/22 19:50:35 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/10/08 21:36:41 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,24 +50,21 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_itoa_base.c \
-	ft_uitoa_base.c
-
-SRCS_BONUS = \
-	ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c \
-	ft_lstsize_bonus.c \
-	ft_lstlast_bonus.c \
-	ft_lstadd_back_bonus.c \
-	ft_lstdelone_bonus.c \
-	ft_lstclear_bonus.c \
-	ft_lstiter_bonus.c \
-	ft_lstmap_bonus.c
+	ft_uitoa_base.c \
+	ft_rsplit.c \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJSDIR = objdir
 
 OBJS = $(SRCS:%.c=$(OBJSDIR)/%.o)
-
-OBJS_BONUS = $(SRCS_BONUS:%.c=$(OBJSDIR)/%.o)
 
 all: $(NAME)
 
@@ -79,9 +76,6 @@ $(OBJSDIR)/%.o: %.c | $(OBJSDIR)
 
 $(OBJSDIR):
 	mkdir -p $(OBJSDIR)
-
-bonus:
-	@$(MAKE) OBJS='$(OBJS) $(OBJS_BONUS)'
 
 clean:
 	rm -rf $(OBJSDIR)
