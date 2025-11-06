@@ -6,7 +6,7 @@
 /*   By: gabrgarc <gabrgarc@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 14:36:24 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/10/08 19:17:17 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:58:33 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	count_len_str(char **tab)
 	return (num_chr);
 }
 
-char	*ft_rsplit(char **tab, char c)
+char	*ft_revsplit(char **tab, char c)
 {
 	char	*str;
 	char	*temp;
