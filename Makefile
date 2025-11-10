@@ -6,7 +6,7 @@
 #    By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 18:07:32 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/10/08 21:36:41 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/11/06 14:26:38 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ SRCS = \
 	ft_putnbr_fd.c \
 	ft_itoa_base.c \
 	ft_uitoa_base.c \
-	ft_rsplit.c \
+	ft_revsplit.c \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
