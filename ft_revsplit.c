@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rsplit.c                                        :+:      :+:    :+:   */
+/*   ft_revsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrgarc <gabrgarc@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 14:36:24 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/11/04 15:58:33 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/11/06 21:25:36 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_revsplit(char **tab, char c)
 	int		len;
 
 	len = count_len_str(tab);
-	str = malloc(sizeof(char) * len + 1);
+	str = ft_calloc(sizeof(char), len + 1);
 	if (!str)
 		return (NULL);
 	while (*(tab))
@@ -47,6 +47,5 @@ char	*ft_revsplit(char **tab, char c)
 			*str++ = c;
 		tab++;
 	}
-	*str = '\0';
 	return (&str[-len]);
 }
