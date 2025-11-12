@@ -6,7 +6,7 @@
 #    By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 18:07:32 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/11/06 14:26:38 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/11/12 11:45:07 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS = \
 	ft_isalnum.c \
 	ft_isascii.c \
 	ft_isprint.c \
+	ft_issignal.c \
 	ft_strlen.c \
 	ft_memset.c \
 	ft_bzero.c \
@@ -36,12 +37,14 @@ SRCS = \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_atoi.c \
+	ft_atol.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_split.c \
+	ft_revsplit.c \
 	ft_itoa.c \
 	ft_strmapi.c \
 	ft_striteri.c \
