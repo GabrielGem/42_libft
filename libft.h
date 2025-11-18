@@ -6,7 +6,7 @@
 /*   By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 21:06:07 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/11/12 11:46:08 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/11/18 09:59:36 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "./get_next_line/get_next_line.h"
 
 typedef struct s_list
 {

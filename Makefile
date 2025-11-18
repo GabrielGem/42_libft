@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabrgarc <gabrgarc@student.42sp.org.b      +#+  +:+       +#+         #
+#    By: gabrgarc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/16 18:07:32 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/11/12 11:45:07 by gabrgarc         ###   ########.fr        #
+#    Created: 2025/11/18 09:49:50 by gabrgarc          #+#    #+#              #
+#    Updated: 2025/11/18 09:58:33 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,6 @@ SRCS = \
 	ft_putnbr_fd.c \
 	ft_itoa_base.c \
 	ft_uitoa_base.c \
-	ft_revsplit.c \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
@@ -65,17 +64,26 @@ SRCS = \
 	ft_lstiter.c \
 	ft_lstmap.c
 
+SRCS_GNL = \
+	get_next_line.c \
+	get_next_line_utils.c
+
 OBJSDIR = objdir
+GNLDIR = get_next_line
 
 OBJS = $(SRCS:%.c=$(OBJSDIR)/%.o)
+OBJS_GNL = $(SRCS_GNL:%.c=$(OBJSDIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(OBJS_GNL)
+	ar rcs $(NAME) $(OBJS) $(OBJS_GNL)
 
 $(OBJSDIR)/%.o: %.c | $(OBJSDIR)
 	@$(CC) $(FLAGS) -c $< -o $@
+
+$(OBJSDIR)/%.o: $(GNLDIR)/%.c | $(OBJSDIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJSDIR):
 	mkdir -p $(OBJSDIR)
