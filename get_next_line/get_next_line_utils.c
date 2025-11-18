@@ -6,7 +6,7 @@
 /*   By: gabrgarc <gabrgarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 18:59:18 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/11/18 10:02:39 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:12:01 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*join_line(t_bucket **head, char **line, int i_line)
 {
 	t_bucket	*node;
-	int		len;
+	int			len;
 
 	node = *head;
 	len = 0;
@@ -44,8 +44,8 @@ t_bucket	*check_remain(t_bucket **head)
 {
 	t_bucket	*tail;
 	t_bucket	*remain;
-	int		i;
-	int		len;
+	int			i;
+	int			len;
 
 	tail = last_node(head);
 	if (!(tail->i + 1 <= tail->read_bytes))
