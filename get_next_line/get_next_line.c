@@ -6,11 +6,11 @@
 /*   By: gabrgarc <gabrgarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 15:47:52 by gabrgarc          #+#    #+#             */
-/*   Updated: 2025/11/18 10:02:09 by gabrgarc         ###   ########.fr       */
+/*   Updated: 2025/12/02 17:10:24 by gabrgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 char	*get_next_line(int fd)
 {

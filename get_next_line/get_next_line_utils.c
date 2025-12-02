@@ -6,11 +6,15 @@
 /*   By: gabrgarc <gabrgarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 18:59:18 by gabrgarc          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2025/11/18 17:12:01 by gabrgarc         ###   ########.fr       */
+=======
+/*   Updated: 2025/12/02 17:10:32 by gabrgarc         ###   ########.fr       */
+>>>>>>> 9df853d (change path to header)
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 char	*join_line(t_bucket **head, char **line, int i_line)
 {
