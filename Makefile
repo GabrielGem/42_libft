@@ -6,13 +6,13 @@
 #    By: gabrgarc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 09:49:50 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/11/18 09:58:33 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/12/02 17:12:00 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -Iincludes
 
 SRCS = \
 	ft_isalpha.c \
@@ -68,21 +68,35 @@ SRCS_GNL = \
 	get_next_line.c \
 	get_next_line_utils.c
 
+SRCS_PRINTF = \
+	ft_printf.c \
+	ft_aux_chrs.c \
+	ft_aux_nbrs.c \
+	ft_aux_ptr.c \
+	printf_utils.c \
+	flags_utils.c \
+	padded.c
+
 OBJSDIR = objdir
 GNLDIR = get_next_line
+PRINTFDIR = ft_printf
 
 OBJS = $(SRCS:%.c=$(OBJSDIR)/%.o)
 OBJS_GNL = $(SRCS_GNL:%.c=$(OBJSDIR)/%.o)
+OBJS_PRINTF = $(SRCS_PRINTF:%.c=$(OBJSDIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJS_GNL)
-	ar rcs $(NAME) $(OBJS) $(OBJS_GNL)
+$(NAME): $(OBJS) $(OBJS_GNL) $(OBJS_PRINTF)
+	ar rcs $(NAME) $(OBJS) $(OBJS_GNL) $(OBJS_PRINTF)
 
 $(OBJSDIR)/%.o: %.c | $(OBJSDIR)
 	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJSDIR)/%.o: $(GNLDIR)/%.c | $(OBJSDIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJSDIR)/%.o: $(PRINTFDIR)/%.c | $(OBJSDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJSDIR):
