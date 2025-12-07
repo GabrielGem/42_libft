@@ -6,7 +6,7 @@
 #    By: gabrgarc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 09:49:50 by gabrgarc          #+#    #+#              #
-#    Updated: 2025/12/02 17:12:00 by gabrgarc         ###   ########.fr        #
+#    Updated: 2025/12/07 18:37:34 by gabrgarc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS = \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_atol.c \
+	ft_atof.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_substr.c \
